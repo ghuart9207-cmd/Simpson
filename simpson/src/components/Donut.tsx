@@ -1,7 +1,11 @@
 import { useState } from "react";
 
-function Donut() {
-  const[nb, setNb] = useState(0);
+interface UserProps {
+ nbdonut : number
+}
+
+function Donut(props : UserProps) {
+  const[nb, setNb] = useState(props.nbdonut);
 
   return (
     <button onClick={ () => setNb(nb + 1)}>
